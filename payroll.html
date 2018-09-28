@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>payroll</title>
+	<link rel="stylesheet" type="text/css" 
+	 href="css/bootstrap.css">
+
+</head>
+<body>
+ <h1 class="alert alert-primary text-center">My Payroll</h1>
+  <section class="row">
+  	<div class="col-md-6">
+  	 <form>
+  	  <input type="number" placeholder="your basics" 
+  	  class="form-control" id="basic">
+        <br>
+  	   <input type="number" placeholder="your water allowance" 
+  	  class="form-control" id="water">
+          <br>
+  	   <input type="number" placeholder="your health allowance" 
+  	  class="form-control" id="health">
+           <br>
+  	    <input type="number" placeholder="your health allowance" 
+  	  class="form-control" id="health">
+         <br>
+  	    <input type="number" placeholder="your NSSF deducted" 
+  	  class="form-control" id="nssf">
+
+  	  <button onmouseover="computerPayroll();" type="button" class="btn btn-info">GET YOUR NET PAY</button>
+  	  <br>
+  	  <div id="error" class="alert alert-success"></div>
+  	 </form>
+  	</div>
+
+
+    <div class="col-md-6">
+     <!-- create a web application for currency converter from KES to any other five currencies -->
+     <form>
+      <table>
+  <tr>
+    <td>KES to US dollars:</td>
+    <td>
+    <input class="frmInput" type="number" size="30" name="US dollars">
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="below">
+     <input type="submit" value="Submit" class="button">
+     </td>
+  </tr>
+</table>
+</form>
+
+<form action='KESconvert.to US dollars'
+method="post" target="_blank">
+<table>
+  <tr>
+    <td>KES to Yen </td>
+    <td>
+    <input class="frmInput" type="text" size="30" name="kes">
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td align="bottom">
+    <input type="submit" value="Submit" class="button">
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     </form>
+    </div>
+  </section>
+
+<script type="text/javascript">
+  function computerPayroll(){
+    //your logic goes here ...
+    var basic=document.getElementById("basic").value;
+    var water=document.getElementById("water").value;
+    var health=document.getElementById("health").value; 
+    var nssf=document.getElementById("nssf").value;
+  //check if they are empty 
+  //operators: Arithmetic +,-,/,
+  //comparison operators <,>,<=,>=,==,/=.
+
+   if (basic=="") {
+   	document.getElementById("error").innerHTML="You must fill all fields";
+    else{
+    //do maths 
+    //convert to int
+     var convertedbasic =parseInt(basic)
+      var convertedwater =parseInt(water)
+       var convertedhealth =parseInt(health)
+        var convertednssf =parseInt(nssf)
+     var answer = (convertedbasic+convertedhealth+convertedwater)-convertednssf;
+     document.getElementById("result")innerHTML =
+     "YOUR NETPAY WILL BE" + answer 
+       
+
+
+    }
+
+
+
+    };
+   }//end
+
+//Another function
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+</body>
+</html>

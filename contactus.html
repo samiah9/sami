@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>contact us </title>
+      <link rel="stylesheet" type="text/css" 
+	 href="css/bootstrap.css">
+
+</head>
+<body>
+
+<a href="task2.html" class="btn btn-success">Back home</a>
+<section class="row">
+   <div class="col-md-6">
+   	 <form >
+   	 <!-- provide ids for each element-->
+   	 	<input type="email" placeholder="your email"
+   	 	class="form-control" id="email">
+   	 	<div id="error1" class="text-danger"></div>
+
+        <input type="username" placeholder="username"
+        class="form-control" id="name">
+        <div id="error2" class="text-danger"></div>
+
+	    <input type="pasword" placeholder="password"
+	    class="form-control" id="password">
+        <div id="error3" class="text-danger"></div>
+
+        <textarea cols="10" rows="5" class="form-control" id="message"></textarea>
+        <div id="error4" class="text-danger"></div>
+
+        <button type="button" class="btn btn-dark" 
+        onclick="ValidateForm3();" >Send message</button>
+
+   	 </form>
+
+   </div>
+
+   <div class="col-md-6">
+   
+
+
+
+
+
+   </div>
+
+ </section>
+
+
+<script type="text/javascript">
+     
+     //JS functions-categorise your program into blocks
+     //in programming a function does some task
+     //below function validates our 1st form
+     //a function name is defined by developer
+     //CamelCase:validateForm,AddNumbers
+     //SnakeCase:validateForm,AddNumbers
+
+     function ValidateForm3()
+     {
+      var email=document.getElementById("email").value;//capture email
+      var name=document.getElementById("name").value;//capture name
+      var message=document.getElementById("message").value;//capture message
+      var password=document.getElementById("password").value;//capture passwordt
+       
+       //decision making if statements
+        if (email=="") {
+         document.getElementById("error1").innerHTML = "Required Email";
+
+        }
+
+        if (name=="") {
+         document.getElementById("error2").innerHTML = "Required name";
+
+        }
+
+        if (password =="") {
+         document.getElementById("error3").innerHTML = "Required Password";
+
+        }
+
+         if (message =="") {
+         document.getElementById("error4").innerHTML = "Required Message";
+
+        }
+
+
+
+
+     }//function ends here
+      
+
+
+
+
+
+   </script>
+   	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
